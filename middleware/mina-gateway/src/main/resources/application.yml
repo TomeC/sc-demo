@@ -1,0 +1,5 @@
+server:
+  port: 20003
+
+mina:
+  port: 3000
