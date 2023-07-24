@@ -19,6 +19,7 @@
         <module>template-srv</module>
         <module>customer-srv</module>
         <module>middleware</module>
+        <module>pure-sb</module>
     </modules>
 
     <properties>
