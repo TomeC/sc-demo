@@ -1,12 +1,12 @@
 package com.example.sb.controller;
 
-import com.example.sb.service.IService;
+import com.example.sb.service.DemoService;
+import com.example.sb.service.cond.CondService;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import javax.annotation.Resource;
-import java.util.Map;
 
 /**
  * @author 王锟
@@ -16,11 +16,12 @@ import java.util.Map;
 @RestController
 public class DemoController {
     @Resource
-    private Map<String, IService> serviceMap;
+    private DemoService service;
+    @Resource
+    private CondService condService;
 
     @GetMapping("/hello")
     public String getHello(@RequestParam("method") String method) {
-        serviceMap.get(method).doSomething();
-        return "ok\n";
+        return condService.getName();
     }
 }

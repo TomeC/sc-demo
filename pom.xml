@@ -20,6 +20,7 @@
         <module>customer-srv</module>
         <module>middleware</module>
         <module>pure-sb</module>
+        <module>security-srv</module>
     </modules>
 
     <properties>
